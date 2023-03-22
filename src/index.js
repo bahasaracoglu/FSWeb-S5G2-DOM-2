@@ -6,16 +6,37 @@ import "./less/index.less";
 // });
 // Kodlar buraya gelecek!
 
-const allP = document.querySelectorAll("p");
+const navA = document.querySelectorAll("nav a");
 
-allP.addEventListener("mouseover", (event) => {
-  for (let i = 0; i < allP.length; i++) {
-    allP[i].style.backgroundColor = "red";
-  }
+navA.forEach((x) =>
+  x.addEventListener("mouseover", (event) => {
+    event.target.backgroundColor = "blue";
+  })
+);
+
+const heading = document.querySelector(".logo-heading");
+
+heading.addEventListener("mouseover", (event) => {
+  backgroundColor = "green";
 });
 
-const destination = document.getElementsByClassName("destination");
+const demo = document.createElement("div");
+document.body.appendChild(demo);
+demo.classList.add("hey");
 
-destination.addEventListener("mouseover", (event) => {
-  destination.style.backgroundColor = "yellow";
+document.querySelector("footer p").addEventListener("onselect", (x) => {
+  alert("hey");
+});
+
+const head = document.querySelector("header");
+document.addEventListener("scroll", (event) => {
+  head.style.backgroundColor = "blue";
+});
+
+window.addEventListener("load", (event) => {
+  console.log("page is fully loaded");
+});
+
+window.addEventListener("load", () => {
+  alert("bişey");
 });
