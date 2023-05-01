@@ -1,9 +1,9 @@
 import "./less/index.less";
 
 // Örnek bir event kullanımı aşağıdadır. Çalıştırmak için comment dışına alın
-// document.querySelector("h1").addEventListener("click",function(e){
-// alert("Bana tıkladın!")
-// });
+document.querySelector("h1").addEventListener("click", function (e) {
+  alert("Bana tıkladın!");
+});
 // Kodlar buraya gelecek!
 
 const navA = document.querySelectorAll("nav a");
@@ -33,10 +33,29 @@ document.addEventListener("scroll", (event) => {
   head.style.backgroundColor = "blue";
 });
 
+const containerhome = document.querySelector(".intro");
+document.addEventListener("scrollend", (event) => {
+  containerhome.style.backgroundColor = "black";
+});
+
 window.addEventListener("load", (event) => {
   console.log("page is fully loaded");
 });
 
 window.addEventListener("load", () => {
   alert("bişey");
+});
+
+const text = document.querySelector(".text-content");
+
+text.addEventListener("copy", (event) => {
+  alert(":)");
+});
+
+const imgg = document.querySelectorAll("img");
+
+imgg.forEach((img) => {
+  img.addEventListener("click", (e) => {
+    img.setAttribute("style", "width:200px;height:200px;");
+  });
 });
